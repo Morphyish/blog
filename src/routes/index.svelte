@@ -12,7 +12,7 @@
 
 <style>
 	ul {
-		margin: 0 0 1em 0;
+		margin: 0 0 1rem 0;
 		line-height: 1.5;
 	}
 </style>

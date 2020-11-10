@@ -6,24 +6,17 @@
 	nav {
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 0 1rem;
 	}
 
 	ul {
+		display: flex;
 		margin: 0;
 		padding: 0;
 	}
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
 	li {
 		display: block;
-		float: left;
 	}
 
 	[aria-current] {
@@ -34,7 +27,7 @@
 	[aria-current]::after {
 		position: absolute;
 		content: '';
-		width: calc(100% - 1em);
+		width: calc(100% - 1rem);
 		height: 2px;
 		background-color: rgb(255,62,0);
 		display: block;
@@ -43,14 +36,14 @@
 
 	a {
 		text-decoration: none;
-		padding: 1em 0.5em;
+		padding: 1rem 0.5rem;
 		display: block;
 	}
 </style>
 
 <nav>
 	<ul>
-		<li><a rel="prefetch" aria-current="{segment === undefined ? 'page' : undefined}" href="/">articles</a></li>
-		<li><a rel="prefetch" aria-current="{segment === 'about' ? 'page' : undefined}" href="/about">about</a></li>
+		<li><a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">articles</a></li>
+		<li><a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a></li>
 	</ul>
 </nav>

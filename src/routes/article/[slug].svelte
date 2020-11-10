@@ -18,14 +18,14 @@
 
 <style>
     .content :global(h2) {
-        font-size: 1.4em;
+        font-size: 1.4rem;
         font-weight: 500;
     }
 
     .content :global(pre) {
         background-color: #f9f9f9;
-        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-        padding: 0.5em;
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .05);
+        padding: .5rem;
         border-radius: 2px;
         overflow-x: auto;
     }
@@ -40,7 +40,7 @@
     }
 
     .content :global(li) {
-        margin: 0 0 0.5em 0;
+        margin: 0 0 .5rem 0;
     }
 </style>
 
