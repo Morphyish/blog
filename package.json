@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "description": "TODO",
+  "description": "I write things in here",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
