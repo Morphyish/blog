@@ -6,12 +6,17 @@
 
 <style>
 	main {
-		position: relative;
 		max-width: 56rem;
 		background-color: white;
 		padding: 2rem;
 		margin: 0 auto;
 		box-sizing: border-box;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: .75rem;
+		}
 	}
 </style>
 

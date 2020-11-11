@@ -22,8 +22,25 @@
         margin-bottom: 3rem;
     }
 
+    h1 {
+        border-left: 2px solid #ff3e00;
+        padding: 0 1rem;
+    }
+
     .date {
         margin: 0;
         text-align: right;
+    }
+
+    .description {
+        font-size: 1.25rem;
+        margin-left: 4rem;
+    }
+
+    @media (max-width: 768px) {
+        .description {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 </style>

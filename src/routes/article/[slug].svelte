@@ -17,19 +17,27 @@
     export let html
 </script>
 
-<Header {...header} />
-
-<div class="content">
+<article>
+    <Header {...header} />
     {@html html}
-</div>
+</article>
 
 <style>
-    .content :global(h2) {
-        font-size: 1.4rem;
+    article :global(h2) {
+        font-size: 1.75rem;
         font-weight: 500;
     }
 
-    .content :global(pre) {
+    article :global(h3) {
+        font-weight: 500;
+    }
+
+    article :global(p) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    article :global(pre) {
         background-color: #f9f9f9;
         box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .05);
         padding: .5rem;
@@ -37,16 +45,23 @@
         overflow-x: auto;
     }
 
-    .content :global(pre) :global(code) {
+    article :global(pre) :global(code) {
         background-color: transparent;
         padding: 0;
     }
 
-    .content :global(ul) {
+    article :global(ul) {
         line-height: 1.5;
     }
 
-    .content :global(li) {
+    article :global(li) {
         margin: 0 0 .5rem 0;
+    }
+
+    @media (max-width: 768px) {
+        article :global(p) {
+            margin-left: .5rem;
+            margin-right: .5rem;
+        }
     }
 </style>
