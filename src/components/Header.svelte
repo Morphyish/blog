@@ -4,7 +4,6 @@
     export let title
     export let date
     export let description
-    export let html
 </script>
 
 <svelte:head>
