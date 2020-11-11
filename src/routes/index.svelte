@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Morphyish's blog</title>
 </svelte:head>
 
 <h1>Scribbles and code</h1>
