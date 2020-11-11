@@ -7,24 +7,33 @@
 </script>
 
 <script>
+	import Link from '../components/Link.svelte'
+
 	export let posts;
 </script>
-
-<style>
-	ul {
-		margin: 0 0 1rem 0;
-		line-height: 1.5;
-	}
-</style>
 
 <svelte:head>
 	<title>Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1>Scribbles and code</h1>
 
 <ul>
 	{#each posts as post}
-		<li><a rel="prefetch" href="article/{post.slug}">{post.title}</a></li>
+		<li>
+			<Link {post} />
+		</li>
 	{/each}
 </ul>
+
+<style>
+	h1 {
+		margin-bottom: 3rem;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0 0 1rem 0;
+		list-style: none;
+	}
+</style>

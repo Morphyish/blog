@@ -2,6 +2,13 @@
 	export let segment;
 </script>
 
+<nav>
+	<ul>
+		<li><a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">blog</a></li>
+		<li><a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a></li>
+	</ul>
+</nav>
+
 <style>
 	nav {
 		border-bottom: 1px solid rgba(255,62,0,0.1);
@@ -40,10 +47,3 @@
 		display: block;
 	}
 </style>
-
-<nav>
-	<ul>
-		<li><a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">articles</a></li>
-		<li><a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a></li>
-	</ul>
-</nav>

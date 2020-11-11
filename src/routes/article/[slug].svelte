@@ -1,10 +1,10 @@
 <script context="module">
     export async function preload({ params }) {
         const res = await this.fetch(`article/${params.slug}.json`)
-        const { title, html } = await res.json()
+        const { html, ...header } = await res.json()
 
         if (res.status === 200) {
-            return { title, html }
+            return { html, header }
         } else {
             this.error(res.status, data.message)
         }
@@ -12,9 +12,16 @@
 </script>
 
 <script>
-    export let title
+    import Header from '../../components/Header.svelte'
+    export let header
     export let html
 </script>
+
+<Header {...header} />
+
+<div class="content">
+    {@html html}
+</div>
 
 <style>
     .content :global(h2) {
@@ -43,13 +50,3 @@
         margin: 0 0 .5rem 0;
     }
 </style>
-
-<svelte:head>
-    <title>{title}</title>
-</svelte:head>
-
-<h1>{title}</h1>
-
-<div class="content">
-    {@html html}
-</div>
